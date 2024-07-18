@@ -338,7 +338,7 @@ while j<len(payload):
 	j += 2
 
 # Fold carry bits into the lower 16 bits
-while (chk_32b &0xffff0000) != 0:
+while (chk_32b & 0xffff0000) != 0:
 	chk_32b = (chk_32b & 0xffff) + (chk_32b >> 16)	
 
 # calculate ones complement to get final checksum (in big endian)
